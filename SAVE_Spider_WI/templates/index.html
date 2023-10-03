@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='validation.js') }}"></script>
+    </head>
+    <body>
+        <div class="puzzing-box">
+            <h2>Spider</h2>
+            <form id="puzzer" action="http://localhost:5000" method = "POST">
+                <div class="target-box">
+                    <input type="url"  oninvalid="this.setCustomValidity('URL을 입력해주세요!')" oninput="this.setCustomValidity('')" id="target_url" name="target_url" required>
+                    <label>Target URI</label>
+                </div>
+                <a href="#" onclick="submitForm(); return false;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Puzzing
+                </a>
+                <p> support by ™SAVE. </p>
+            </form>
+        </div>
+        <div id="dashboard">
+            
+        </div>
+        <div id="sidePage" class="side-page">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+    </body>
+</html>
